@@ -52,16 +52,16 @@ public class StudentController {
 		}
 			
 		// 5.update Student
-		@PutMapping("/update/{id}")
-		public Student update(Student student,int id)
-		{
-			return service.updateStudent(student, id);
-		}
+		// @PutMapping("/update/{id}")
+		// public Student update(Student student,int id)
+		// {
+		// 	return service.updateStudent(student, id);
+		// }
 		
-//		@PutMapping("/update/{id}")
-//		public Student update(@RequestBody Student student, @PathVariable int id) {
-//		    return service.updateStudent(student, id);
-//		}
+		@PutMapping("/update/{id}")
+		public Student update(@RequestBody Student student, @PathVariable int id) {
+		    return service.updateStudent(student, id);
+		}
 
 
 	}
