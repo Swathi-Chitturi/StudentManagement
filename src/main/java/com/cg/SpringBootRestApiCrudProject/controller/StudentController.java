@@ -21,6 +21,10 @@ import com.cg.SpringBootRestApiCrudProject.service.StudentService;
 public class StudentController {
 	@Autowired
 	StudentService service;
+	@GetMapping("/")
+	public String home() {
+	    return "✅ Student Management API is running!";
+	}
 	
 	// 1. get all the student
 		@GetMapping("/students")
